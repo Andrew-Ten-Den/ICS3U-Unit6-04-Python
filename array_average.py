@@ -24,23 +24,26 @@ def main():
     a_2d_list = []
 
     # input
-    rows = int(input("How many rows would you like: "))
-    columns = int(input("How many columns would you like: "))
-    print("")
-
-    for loop_counter_rows in range(0, rows):
-        temp_column = []
-        for loop_counter_columns in range(0, columns):
-            a_random_number = random.randint(0, 50)
-            temp_column.append(a_random_number)
-            print("{0} ".format(a_random_number), end="")
-        a_2d_list.append(temp_column)
+    try:
+        rows = int(input("How many rows would you like: "))
+        columns = int(input("How many columns would you like: "))
         print("")
-
-    sum = sum_of_numbers(a_2d_list)
-    average = sum / (rows * columns)
-    print("\nThe average of all the numbers is: {0} ".format(average))
-    print("Done")
+    
+        for loop_counter_rows in range(0, rows):
+            temp_column = []
+            for loop_counter_columns in range(0, columns):
+                a_random_number = random.randint(0, 50)
+                temp_column.append(a_random_number)
+                print("{0} ".format(a_random_number), end="")
+            a_2d_list.append(temp_column)
+            print("")
+    
+        sum = sum_of_numbers(a_2d_list)
+        average = sum / (rows * columns)
+        print("\nThe average of all the numbers is: {0} ".format(average))
+        print("Done")
+    except Exception:
+        print("Please enter two valid integers")
 
 
 if __name__ == "__main__":
