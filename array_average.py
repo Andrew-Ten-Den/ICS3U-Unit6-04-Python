@@ -28,7 +28,7 @@ def main():
         rows = int(input("How many rows would you like: "))
         columns = int(input("How many columns would you like: "))
         print("")
-    
+
         for loop_counter_rows in range(0, rows):
             temp_column = []
             for loop_counter_columns in range(0, columns):
@@ -37,7 +37,7 @@ def main():
                 print("{0} ".format(a_random_number), end="")
             a_2d_list.append(temp_column)
             print("")
-    
+
         sum = sum_of_numbers(a_2d_list)
         average = sum / (rows * columns)
         print("\nThe average of all the numbers is: {0} ".format(average))
